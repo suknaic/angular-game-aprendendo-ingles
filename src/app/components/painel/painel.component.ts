@@ -39,8 +39,8 @@ export class PainelComponent implements OnInit {
 
   verificarResposta(): void {
     if (
-      this.rodadaFrase.frasePortugues.toUpperCase() ===
-      this.resposta.toUpperCase()
+      this.rodadaFrase.frasePortugues.toLowerCase() ===
+      this.resposta.toLowerCase()
     ) {
       this.progresso = this.progresso + this.frases.length / 100;
       this.rodada++;

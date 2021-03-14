@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 import { Coracao } from 'src/app/mock/coracao.mock';
 
@@ -7,12 +7,11 @@ import { Coracao } from 'src/app/mock/coracao.mock';
   templateUrl: './tentativas.component.html',
   styleUrls: ['./tentativas.component.css'],
 })
-export class TentativasComponent implements OnInit {
-  @Input()
-  public tentativas: number;
+export class TentativasComponent implements OnInit, OnChanges {
+  @Input() public tentativas: number;
 
   public coracoes: Coracao[] = [
-    new Coracao(false),
+    new Coracao(true),
     new Coracao(true),
     new Coracao(true),
   ];
@@ -20,4 +19,11 @@ export class TentativasComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.tentativas !== this.coracoes.length) {
+      const indice = this.coracoes.length - this.tentativas;
+      this.coracoes[indice - 1].cheio = false;
+    }
+  }
 }

@@ -5,5 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'app1';
+  public encerrarJogo(type: string): void {
+    if (type === 'vitoria') {
+      console.log('encerrar jogo com vitoria');
+    } else {
+      console.log('encerrar jogo com derrota');
+    }
+  }
 }

@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TopoComponent } from './components/topo/topo.component';
+import { PainelComponent } from './components/painel/painel.component';
+import { ProgressoComponent } from './components/progresso/progresso.component';
+import { TentativasComponent } from './components/tentativas/tentativas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopoComponent,
+    PainelComponent,
+    ProgressoComponent,
+    TentativasComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

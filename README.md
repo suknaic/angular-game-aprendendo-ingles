@@ -11,7 +11,7 @@
 
 install angular cli on your system
 
-- npm
+- yarn
   ```sh
   yarn global add @angular-cli
   ```
@@ -22,7 +22,7 @@ install angular cli on your system
    ```sh
    git clone https://github.com/suknaic/aprendendo-ingles.git
    ```
-3. Install NPM packages
+3. Install packages
    ```sh
    yarn install
    ```

@@ -12,4 +12,8 @@ export class AppComponent {
     this.jogoEmAndamento = false;
     this.tipoEncerramento = message;
   }
+
+  public reiniciarGame(): void {
+    this.jogoEmAndamento = true;
+  }
 }

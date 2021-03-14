@@ -9,7 +9,7 @@
       <div class="jumbotron" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <img src="./assets/gameover.png" style="width: 300px; display: block;" alt="game over">
 
-        <button class="btn btn-dark">JOGAR NOVAMENTE</button>
+        <button (click)="reiniciarGame()" class="btn btn-dark">JOGAR NOVAMENTE</button>
       </div>
   </div>
 </ng-template>
@@ -19,7 +19,7 @@
     <div class="jumbotron" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
       <img src="./assets/youwin.png" style="width: 300px; display: block;" alt="you win">
 
-      <button class="btn btn-success">JOGAR NOVAMENTE</button>
+      <button (click)="reiniciarGame()" class="btn btn-success">JOGAR NOVAMENTE</button>
     </div>
   </div>
 </ng-template>

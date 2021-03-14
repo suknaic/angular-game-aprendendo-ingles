@@ -42,13 +42,11 @@ export class PainelComponent implements OnInit {
       this.rodadaFrase.frasePortugues.toLowerCase() ===
       this.resposta.toLowerCase()
     ) {
-      this.progresso = this.progresso + this.frases.length / 100;
       this.rodada++;
-
+      this.progresso = this.progresso + 25;
       if (this.rodada === 4) {
         this.encerrarJogo.emit('vitoria');
       }
-
       this.atualizaRodada();
     } else {
       this.tentativas--;
